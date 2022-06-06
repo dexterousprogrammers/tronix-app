@@ -1,10 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
     <div className="App">
-   <h1>Sourav</h1>
+      <Routes>
+        
+      <Route path="*" element={<NotFound />}></Route>
+</Routes>
     </div>
   );
 }
