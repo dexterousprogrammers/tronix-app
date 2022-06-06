@@ -1,9 +1,9 @@
 import { Rating, Slider } from '@mui/material'
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 const AllCatagories = () => {
-    const [value, setValue] = useState(0)
+
     return (
         <div>
             <h1 className='text-center text-4xl mt-20 font-bold'>All Categories</h1>
@@ -11,9 +11,9 @@ const AllCatagories = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor incididunt ut labore.
             </p>
             <div className='container mx-auto mt-14'>
-                <div className=" border p-4 overflow-y-auto">
+                <div className="  p-4 overflow-y-auto">
                     <label htmlFor="my-drawer-2" className="drawer-overlay" />
-                    <div className='menu  w-64 '>
+                    <div className='menu border p-5 w-64 '>
                         <ul className="bg-base-100 text-base-content h-[550px] color-scroll overflow-x-auto">
                             {/* Sidebar content here */}
                             <li className='hover:bg-base-100'>
@@ -98,9 +98,9 @@ const AllCatagories = () => {
                                         <Rating
                                             name="simple-controlled"
                                             value={1}
-                                            style={{color: '#F46B5B'}}
+                                            style={{ color: '#F46B5B' }}
                                         />
-                                        </span>
+                                    </span>
                                     <input type="radio" name="radio-6" className="radio checked:bg-primary" checked />
                                 </label>
                             </div>
@@ -110,9 +110,9 @@ const AllCatagories = () => {
                                         <Rating
                                             name="simple-controlled"
                                             value={2}
-                                            style={{color: '#F46B5B'}}
+                                            style={{ color: '#F46B5B' }}
                                         />
-                                        </span>
+                                    </span>
                                     <input type="radio" name="radio-6" className="radio checked:bg-primary" checked />
                                 </label>
                             </div>
@@ -122,9 +122,9 @@ const AllCatagories = () => {
                                         <Rating
                                             name="simple-controlled"
                                             value={3}
-                                           style={{color: '#F46B5B'}}
+                                            style={{ color: '#F46B5B' }}
                                         />
-                                        </span>
+                                    </span>
                                     <input type="radio" name="radio-6" className="radio checked:bg-primary" checked />
                                 </label>
                             </div>
@@ -134,9 +134,9 @@ const AllCatagories = () => {
                                         <Rating
                                             name="simple-controlled"
                                             value={4}
-                                            style={{color: '#F46B5B'}}
+                                            style={{ color: '#F46B5B' }}
                                         />
-                                        </span>
+                                    </span>
                                     <input type="radio" name="radio-6" className="radio checked:bg-primary" checked />
                                 </label>
                             </div>
@@ -146,16 +146,23 @@ const AllCatagories = () => {
                                         <Rating
                                             name="simple-controlled"
                                             value={5}
-                                            style={{color: '#F46B5B'}}
+                                            style={{ color: '#F46B5B' }}
                                         />
-                                        </span>
+                                    </span>
                                     <input type="radio" name="radio-6" className="radio checked:bg-primary" checked />
                                 </label>
                             </div>
                         </div>
-
-
+                        <div className="divider mt-10"></div>
+                        <h1 className='flex items-center justify-between mt-3 w-full'>Filter by Brand <i className="fa-solid cursor-pointer fa-angle-down"></i></h1>
+                        <h1 className='flex items-center justify-between mt-3 w-full'>Filter by Promotion <i className="fa-solid cursor-pointer fa-angle-down"></i></h1>
+                        <h1 className='flex items-center justify-between mt-3 w-full'>Filter by Payment <i className="fa-solid cursor-pointer fa-angle-down"></i></h1>
+                        <h1 className='flex items-center justify-between mt-3 w-full'>Filter by Shipment <i className="fa-solid cursor-pointer fa-angle-down"></i></h1>
                         {/* end */}
+
+
+                        <button className='btn btn-primary mt-10 text-white '>Filter</button>
+                        <button className='btn-link mt-5 text-primary font-bols'>Reset Filter </button>
                     </div>
 
                 </div>

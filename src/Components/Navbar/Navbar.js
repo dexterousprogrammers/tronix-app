@@ -59,8 +59,8 @@ const NavbarBottom = () => {
                         <Navigations />
                     </ul>
                 </div>
-                <a class="btn btn-ghost normal-case text-xl">
-                    <img src={logo} alt="" />
+                <a href='/' class="btn btn-ghost normal-case text-xl">
+                    <img src={logo} alt="logo" />
                 </a>
             </div>
             <div class="navbar-center hidden lg:flex">
@@ -71,10 +71,10 @@ const NavbarBottom = () => {
             <div class="navbar-end ">
                 <Link className='relative mr-5' to={'#'}>
                     <div class="badge badge-primary absolute bottom-7 left-2 ml-2 text-white font-bold">99</div>
-                    <img src={cartIcon} alt="" />
+                    <img src={cartIcon} alt="cartIcon" />
                 </Link>
                 <Link to={'#'}>
-                    <img src={Email} alt="" />
+                    <img src={Email} alt="Email" />
                 </Link>
             </div>
         </div>
