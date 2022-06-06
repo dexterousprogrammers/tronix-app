@@ -10,9 +10,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-h1{
+h1 {
     font-family: 'Montserrat', sans-serif;
 }
-p{
+
+p {
     font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(214, 214, 214);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #F46B5B;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(196, 196, 196);
+}
+
+.css-187mznn-MuiSlider-root {
+    color: #F46B5B !important;
+    margin-top: 20px;
 }
