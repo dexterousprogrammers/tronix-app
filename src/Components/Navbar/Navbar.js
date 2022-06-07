@@ -49,28 +49,28 @@ const TopNavbar = () => {
 
 const NavbarBottom = () => {
     return (
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <label tabindex="0" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <div className="navbar bg-base-100">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-auto">
+                    <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-auto">
                         <Navigations />
                     </ul>
                 </div>
-                <a href='/' class="btn btn-ghost normal-case text-xl">
+                <a href='/' className="btn btn-ghost normal-case text-xl">
                     <img src={logo} alt="logo" />
                 </a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal items-center p-0">
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal items-center p-0">
                     <Navigations />
                 </ul>
             </div>
-            <div class="navbar-end ">
+            <div className="navbar-end ">
                 <Link className='relative mr-5' to={'#'}>
-                    <div class="badge badge-primary absolute bottom-7 left-2 ml-2 text-white font-bold">99</div>
+                    <div className="badge badge-primary absolute bottom-7 left-2 ml-2 text-white font-bold">99</div>
                     <img src={cartIcon} alt="cartIcon" />
                 </Link>
                 <Link to={'#'}>
@@ -89,7 +89,7 @@ const Navigations = () => {
             <li className='mx-2'><NavLink className='nl' to='/blog'>Blog</NavLink></li>
             <li className='mx-2'><NavLink className='nl' to='/contact'>Contact</NavLink></li>
             <div className='flex h-8 lg:ml-14 mt-3  px-3 lg:px-3 lg:mt-0'>
-                <input type="text" placeholder="Type here" class="bg-base-200 lg:w-64 text-black h-full  rounded-none input focus:border-primary focus:outline-none " />
+                <input type="text" placeholder="Type here" className="bg-base-200 lg:w-64 text-black h-full  rounded-none input focus:border-primary focus:outline-none " />
                 <button className='h-full bg-primary px-5'>
                     <i className="fa-solid text-white fa-magnifying-glass"></i>
                 </button>
