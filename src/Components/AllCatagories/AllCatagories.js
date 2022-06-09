@@ -14,7 +14,8 @@ const AllCatagories = () => {
             setClass('category-sidebar')
         }
     }
-
+    // commet 
+    
     return (
         <div className='relative'>
             <nav className='w-full flex items-center  border px-10 md:hidden lg:hidden sticky top-0 z-50 bg-base-200'>
