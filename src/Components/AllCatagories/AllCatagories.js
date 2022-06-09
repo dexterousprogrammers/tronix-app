@@ -14,7 +14,6 @@ const AllCatagories = () => {
             setClass('category-sidebar')
         }
     }
-    // commet 
     
     return (
         <div className='relative'>
