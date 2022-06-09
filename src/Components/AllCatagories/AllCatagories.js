@@ -1,20 +1,47 @@
 import { Rating, Slider } from '@mui/material'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import ComponentViewer from './Component/ComponentViewer'
 
 const AllCatagories = () => {
     const [setValue] = useState(0)
+    const [show, setShow] = useState(false)
+    const [nav, setClass] = useState('category-sidebar')
+    const showBar = () => {
+        if (nav === "category-sidebar") {
+            setClass('show-sidebar animate__animated animate__fadeInUp')
+        }
+        else {
+            setClass('category-sidebar')
+        }
+    }
+    const [paths, setPaths] = useState([])
+    useEffect(() => {
+        const path = window.location.pathname.split('/')
+        const paths = path.slice(1, path.length)
+        setPaths(paths)
+    }, [useLocation()])
+
     return (
-        <div>
+        <div className='relative'>
+            <nav className='w-full flex items-center  border px-10 md:hidden lg:hidden sticky top-0 z-50 bg-base-200'>
+                <button onClick={showBar} className='btn btn-ghost'><i className="fa-solid text-2xl fa-bars"></i> </button>
+
+                <div className="text-sm breadcrumbs ml-2">
+                    <ul>
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><Link to={'/all-category'}>All Catagory</Link></li>
+                    </ul>
+                </div>
+            </nav>
             <h1 className='text-center text-4xl mt-20 font-bold'>All Categories</h1>
             <p className='text-center mt-5'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor incididunt ut labore.
             </p>
             <section className='container mx-auto mt-14'>
-                <div className='flex '>
-                    <div className="p-4 border p-5 w-64  mr-2 overflow-y-auto">
-                        <label htmlFor="my-drawer-2" className="drawer-overlay" />
+                <div className='flex'>
+                    <div className={`p-4 ${nav}  border p-5 w-64  mr-2 overflow-y-auto`}>
+
                         <div className='menu '>
                             <ul className="bg-base-100 text-base-content h-[550px] color-scroll overflow-x-auto">
                                 {/* Sidebar content here */}

@@ -10,7 +10,7 @@ const CategoryProduct = () => {
                 <Link className='btn-link text-primary font-bold' to={'/product'}>Show All</Link>
             </h2>
 
-            <div className='grid grid-cols-3 mt-10 gap-7 px-2 product-container'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-10 gap-7 px-2 product-container'>
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />

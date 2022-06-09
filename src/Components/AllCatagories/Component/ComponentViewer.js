@@ -9,8 +9,8 @@ import Cocoon from '../icons/brands/Cocoon.png'
 import CategoryProduct from './CategoryProduct'
 const ComponentViewer = () => {
     return (
-        <main className='p-5 w-full'>
-            <div className="catagories grid grid-cols-4 gap-6">
+        <main className='p-0 lg:p-5 w-full'>
+            <div className="catagories grid grid-cols-3 lg:grid-cols-4 gap-6 p-3">
                 <CategoriesCard />
                 <CategoriesCard />
                 <CategoriesCard />
@@ -23,7 +23,7 @@ const ComponentViewer = () => {
             <div className='p-2'>
 
                 <h1 className='text-2xl font-bold  mt-10'>Featured Brand</h1>
-                <div className="grid grid-cols-6 gap-4 mt-10">
+                <div className="grid grid-cols-3 lg:grid-cols-6 gap-4 mt-10">
                     <img className='border px-6 py-4' src={simsong} alt="" />
                     <img className='border px-6 py-4' src={Diskvan} alt="" />
                     <img className='border px-6 py-4' src={Harps} alt="" />
