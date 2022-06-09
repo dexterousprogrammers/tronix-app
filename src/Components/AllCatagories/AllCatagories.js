@@ -1,11 +1,10 @@
 import { Rating, Slider } from '@mui/material'
-import React, { useEffect, useState } from 'react'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ComponentViewer from './Component/ComponentViewer'
 
 const AllCatagories = () => {
     const [setValue] = useState(0)
-    const [show, setShow] = useState(false)
     const [nav, setClass] = useState('category-sidebar')
     const showBar = () => {
         if (nav === "category-sidebar") {
@@ -15,12 +14,6 @@ const AllCatagories = () => {
             setClass('category-sidebar')
         }
     }
-    const [paths, setPaths] = useState([])
-    useEffect(() => {
-        const path = window.location.pathname.split('/')
-        const paths = path.slice(1, path.length)
-        setPaths(paths)
-    }, [useLocation()])
 
     return (
         <div className='relative'>
